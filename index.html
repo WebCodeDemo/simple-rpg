@@ -3,29 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple RPG Game</title>
+    <title>Shadowville: A Tale of Corruption</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="game-container">
         <div id="town" class="scene active">
             <div id="player"></div>
-            <div class="npc" data-message="Did you hear about the new AI-powered traffic lights? They're supposed to reduce congestion by 30%!"></div>
-            <div class="npc" data-message="I heard the mayor is pushing for more electric vehicle charging stations downtown."></div>
-            <div class="house" data-house="1"></div>
-            <div class="house" data-house="2"></div>
+            <div class="npc" data-id="citizen1" data-message="I've been noticing strange symbols appearing around town lately. It's probably nothing, right?"></div>
+            <div class="npc" data-id="concerned-citizen" data-message="The mayor's been acting odd lately. He's pushing for some weird new laws."></div>
+            <div class="npc" data-id="greeter" data-message="Welcome to Shadowville! I hope you enjoy your stay."></div>
+            <div class="house" data-house="1" data-name="Library"></div>
+            <div class="house" data-house="2" data-name="Town Hall"></div>
+            <div class="house" data-house="3" data-name="Mystic Shop"></div>
+            <div class="house" data-house="4" data-name="Ancient Tower"></div>
         </div>
+
         <div id="house1" class="scene">
-            <div class="npc" data-message="Welcome to my smart home! Everything here is voice-controlled."></div>
+            <h2>Library</h2>
+            <div class="npc" data-id="librarian" data-message="I found an old book about ancient rituals. It mentions something called the 'Seal of Dominion'..."></div>
             <div class="exit" data-exit="1"></div>
         </div>
+
         <div id="house2" class="scene">
-            <div class="npc" data-message="I'm working on a new app that uses augmented reality for urban gardening."></div>
+            <h2>Town Hall</h2>
+            <div class="npc" data-id="secretary" data-message="The mayor's not here right now. He's been spending a lot of time in that old tower outside town."></div>
             <div class="exit" data-exit="2"></div>
         </div>
+
+        <div id="house3" class="scene">
+            <h2>Mystic Shop</h2>
+            <div class="npc" data-id="mystic" data-message="I sense a dark energy growing in this town. Be cautious, traveler."></div>
+            <div class="exit" data-exit="3"></div>
+        </div>
+
+        <div id="house4" class="scene">
+            <h2>Ancient Tower</h2>
+            <div class="npc" data-id="mayor" data-message="What are you doing here? How did you get in?"></div>
+            <div class="exit" data-exit="4"></div>
+        </div>
     </div>
+
     <div id="message-box"></div>
     <div id="interaction-prompt"></div>
+    <div id="inventory"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
