@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple RPG Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="town" class="scene active">
+            <div id="player"></div>
+            <div class="npc" data-message="Did you hear about the new AI-powered traffic lights? They're supposed to reduce congestion by 30%!"></div>
+            <div class="npc" data-message="I heard the mayor is pushing for more electric vehicle charging stations downtown."></div>
+            <div class="house" data-house="1"></div>
+            <div class="house" data-house="2"></div>
+        </div>
+        <div id="house1" class="scene">
+            <div class="npc" data-message="Welcome to my smart home! Everything here is voice-controlled."></div>
+            <div class="exit" data-exit="1"></div>
+        </div>
+        <div id="house2" class="scene">
+            <div class="npc" data-message="I'm working on a new app that uses augmented reality for urban gardening."></div>
+            <div class="exit" data-exit="2"></div>
+        </div>
+    </div>
+    <div id="message-box"></div>
+    <div id="interaction-prompt"></div>
+    <script src="script.js"></script>
+</body>
+</html>
